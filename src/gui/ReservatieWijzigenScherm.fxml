@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="600.0" type="GridPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="300.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="300.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+      <RowConstraints vgrow="NEVER" />
+      <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="NEVER" />
+      <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="NEVER" />
+      <RowConstraints vgrow="NEVER" />
+      <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="NEVER" />
+      <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="NEVER" />
+      <RowConstraints vgrow="NEVER" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints vgrow="NEVER" />
+      <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="NEVER" />
+  </rowConstraints>
+   <children>
+      <TextField fx:id="txfAfhaalUur" promptText="Terugbrenguur" GridPane.columnIndex="1" GridPane.rowIndex="6">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+      </TextField>
+      <Label text="Ophaaldatum" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="20.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="Ophaaluur" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="20.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="Terugbrengdatum" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets left="20.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="Terugbrenguur" GridPane.rowIndex="6">
+         <GridPane.margin>
+            <Insets left="20.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="Reservatie Wijzigen" textAlignment="CENTER" underline="true" GridPane.columnSpan="2" GridPane.halignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <GridPane.margin>
+            <Insets top="30.0" />
+         </GridPane.margin>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Separator prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="9" />
+      <Label fx:id="lblFoutbericht" textFill="RED" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets right="10.0" />
+         </GridPane.margin>
+      </Label>
+      <DatePicker fx:id="datePickerOphaaldatum" promptText="Ophaaldatum" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+      </DatePicker>
+      <TextField fx:id="txfOphaaluur" promptText="Ophaaluur" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+      </TextField>
+      <Separator prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+      <DatePicker fx:id="datePickerAfhaaldatum" promptText="Terugbrengdatum" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+      </DatePicker>
+      <Separator prefWidth="200.0" GridPane.columnSpan="2" GridPane.rowIndex="7" />
+      <TableView fx:id="tableViewProducten" editable="true" prefHeight="93.0" prefWidth="600.0" GridPane.columnSpan="2" GridPane.rowIndex="8">
+        <columns>
+          <TableColumn fx:id="tableColumnNaam" editable="false" prefWidth="244.0" text="Artikelnaam" />
+          <TableColumn fx:id="tableColumnAantalGeleend" prefWidth="154.0" text="Aantal uitgeleend" />
+            <TableColumn fx:id="tableColumnAantalterug" prefWidth="181.0" text="Aantal teruggebracht" />
+        </columns>
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+      </TableView>
+      <Button fx:id="btnWijzigen" alignment="CENTER" mnemonicParsing="false" onAction="#btnWijzigenOnAction" prefWidth="100.0" text="Wijzigen" GridPane.columnSpan="2" GridPane.rowIndex="10">
+         <GridPane.margin>
+            <Insets left="250.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="btnAnnuleren" alignment="CENTER" mnemonicParsing="false" onAction="#btnAnnulerenOnAction" prefWidth="100.0" text="Annuleren" textAlignment="CENTER" GridPane.columnSpan="2" GridPane.rowIndex="10">
+         <GridPane.margin>
+            <Insets left="370.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="btnVerwijderen" alignment="CENTER" mnemonicParsing="false" onAction="#btnVerwijderenOnAction" prefWidth="100.0" text="Verwijderen" textFill="RED" GridPane.columnSpan="2" GridPane.rowIndex="10">
+         <GridPane.margin>
+            <Insets left="490.0" />
+         </GridPane.margin>
+      </Button>
+   </children>
+</fx:root>

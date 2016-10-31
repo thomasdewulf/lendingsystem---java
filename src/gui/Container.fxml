@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" type="BorderPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Product">
+            <items>
+              <MenuItem fx:id="itemProductToevoegen" mnemonicParsing="false" onAction="#productToevoegenOnAction" text="Product toevoegen..." />
+                  <MenuItem fx:id="itemProductenToevoegen" mnemonicParsing="false" onAction="#productenToevoegenOnAction" text="Producten toevoegen..." />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Reservaties">
+            <items>
+              <MenuItem fx:id="itemReservatiesBekijken" mnemonicParsing="false" onAction="#reservatiesBekijkenOnAction" text="Reservaties bekijken..." />
+                  <MenuItem fx:id="itemReservatieToevoegen" mnemonicParsing="false" onAction="#reservatieToevoegenOnAction" text="Reservatie toevoegen..." />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Beheerders">
+              <items>
+                <MenuItem fx:id="itemBeheerdersBeheren" mnemonicParsing="false" onAction="#beheerdersBeherenOnAction" text="Beheerders beheren..." />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Systeemconfiguratie">
+               <items>
+                  <MenuItem fx:id="itemSysteemconfiguratieWijzigen" mnemonicParsing="false" onAction="#configuratieWijzigen" text="Wijzig ..." />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</fx:root>
